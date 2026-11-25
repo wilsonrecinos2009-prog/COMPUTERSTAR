@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Computer Star | Venta, reparación y suministros de computadoras</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F6FC;--surface:#FFFFFF;--ink:#0F1B4D;--muted:#46557F;--line:#D3DBEE;--blue:#1F4BFF;--navy:#0B1340;--lime:#7ED321;--lime-ink:#0B1340;
+--font-d:'Orbitron',system-ui,sans-serif;--font-b:'Figtree',system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0A1030;--surface:#131C4A;--ink:#EDF1FF;--muted:#AEB9DD;--line:#25316B}}
+:root[data-theme="dark"]{--bg:#0A1030;--surface:#131C4A;--ink:#EDF1FF;--muted:#AEB9DD;--line:#25316B}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.1rem/1.6 var(--font-b)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+.hero{background:radial-gradient(circle at 78% 45%,#1d3bd6 0,#0B1340 55%);color:#fff;overflow:hidden}
+header{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:900 1.1rem var(--font-d);letter-spacing:.03em}
+.brand svg{width:30px;height:30px}
+.btn{display:inline-block;padding:15px 28px;border-radius:12px;background:var(--lime);color:var(--lime-ink);font-weight:700;font-size:1.1rem;text-decoration:none;text-align:center;border:0;cursor:pointer;font-family:inherit;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.hero-body{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center;padding:40px 0 72px}
+h1{font:900 clamp(2rem,5.6vw,3.6rem)/1.1 var(--font-d);margin:0 0 14px}
+.rot{display:block;color:var(--lime);min-height:1.15em}
+.rot span{display:inline-block;animation:in .5s ease}
+@keyframes in{from{opacity:0;transform:translateY(.4em)}to{opacity:1;transform:none}}
+.sub{color:#C9D3FF;margin:0 0 26px;max-width:36ch}
+.starwrap{justify-self:center;width:min(300px,70%)}
+.starwrap svg{width:100%;display:block;filter:drop-shadow(0 0 18px rgba(90,140,255,.8));animation:float 5s ease-in-out infinite}
+.starwrap polygon{stroke-dasharray:330;stroke-dashoffset:330;animation:draw 1.6s .2s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes float{50%{transform:translateY(-10px)}}
+section{padding:56px 0}
+h2{font:900 clamp(1.4rem,3.4vw,2rem)/1.2 var(--font-d);margin:0 0 20px}
+.tabs{display:flex;gap:10px;overflow-x:auto;padding:4px 2px 12px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;padding:12px 22px;border-radius:999px;border:2px solid var(--line);background:var(--surface);color:var(--ink);font:700 1rem var(--font-b);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.tab[aria-selected="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px;margin-top:6px;animation:in .35s ease}
+.panel h3{font:700 1.3rem var(--font-d);margin:0 0 8px}
+.panel p{color:var(--muted);margin:0 0 14px;max-width:52ch}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 22px;padding:0;list-style:none}
+.chips li{padding:8px 16px;border-radius:999px;background:var(--bg);border:1px solid var(--line)}
+.ops{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 22px}
+.op{font:700 1rem var(--font-d);color:#fff;text-align:center;padding:16px 6px;border-radius:12px}
+.tigo{background:#00377D}.movistar{background:#2F7A08}.digicel{background:#D1001F}.claro{background:#C4231A}
+.contact{text-align:center}
+.contact p{color:var(--muted);margin:0 0 6px}
+.contact .btn{margin:18px 0 22px}
+footer{background:var(--navy);color:#C9D3FF;padding:20px 0;font-size:.95rem;text-align:center}
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:#1FA855;color:#fff;font-weight:700;text-decoration:none;padding:16px 22px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.3);z-index:5}
+@media (max-width:760px){.hero-body{grid-template-columns:1fr;padding-bottom:56px}.starwrap{width:120px;order:-1;justify-self:start}.btn{width:100%}.ops{grid-template-columns:1fr 1fr}.panel{padding:22px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.starwrap polygon{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="star" viewBox="0 0 100 95"><polygon points="50,4 61.2,36 95,36.5 68,56.5 78,89 50,70 22,89 32,56.5 5,36.5 38.8,36" fill="none" stroke="#fff" stroke-width="7" stroke-linejoin="miter"/></symbol></svg>
+
+<div class="hero">
+<div class="wrap">
+  <header>
+    <a class="brand" href="#inicio"><svg aria-hidden="true"><use href="#star"/></svg>COMPUTER STAR</a>
+    <a class="btn" style="padding:10px 20px;font-size:1rem" href="https://wa.me/50300000000">WhatsApp</a>
+  </header>
+  <div class="hero-body" id="inicio">
+    <div>
+      <h1>Nosotros<span class="rot" id="rot"><span>reparamos.</span></span></h1>
+      <p class="sub">Venta, reparación y suministros de computadoras.</p>
+      <a class="btn" href="#que-necesitas">¿Qué necesitas hoy?</a>
+    </div>
+    <div class="starwrap"><svg viewBox="0 0 100 95" role="img" aria-label="Logo de Computer Star"><use href="#star"/></svg></div>
+  </div>
+</div>
+</div>
+
+<main class="wrap">
+<section id="que-necesitas">
+  <h2>¿Qué necesitas hoy?</h2>
+  <div class="tabs" role="tablist" id="tabs" aria-label="Servicios"></div>
+  <div class="panel" id="panel" role="tabpanel" aria-live="polite"></div>
+</section>
+
+<section class="contact" id="contacto">
+  <h2>Escríbenos</h2>
+  <p>Cuéntanos qué necesitas y te respondemos por WhatsApp.</p>
+  <a class="btn" href="https://wa.me/50300000000">Abrir WhatsApp</a>
+  <p>[Dirección del local]</p>
+  <p>[Teléfono] · [Horario]</p>
+</section>
+</main>
+
+<footer>© 2026 Computer Star</footer>
+<a class="wa" href="https://wa.me/50300000000" aria-label="Escribir por WhatsApp">WhatsApp</a>
+
+<script>
+var NUM="50300000000";
+var DATA=[
+ {l:"Reparar",t:"Mantenimiento y reparación",p:"Computadoras e impresoras. Te decimos qué tiene y cuánto cuesta antes de repararlo.",c:["Equipo lento","No enciende","Impresora que no imprime","Limpieza"],m:"Hola, necesito reparar un equipo"},
+ {l:"Office",t:"Licencias de Office",p:"Actualizamos tu licencia de Microsoft Office para que trabajes sin avisos.",c:["Word","Excel","PowerPoint"],m:"Hola, quiero actualizar mi licencia de Office"},
+ {l:"Imprimir",t:"Impresiones",p:"Trae tu archivo en USB o envíalo por WhatsApp.",c:["Documentos","Tareas","Trámites"],m:"Hola, quiero hacer una impresión"},
+ {l:"Recargas",t:"Recargas de saldo",p:"Recarga tu teléfono en minutos.",ops:["Tigo","Movistar","Digicel","Claro"],m:"Hola, quiero hacer una recarga"},
+ {l:"Comprar",t:"Tienda",p:"Equipo, tinta y accesorios nuevos. Pregunta por disponibilidad y precio.",c:["Monitores","CPU","Impresoras","Tinta para impresoras","Mouse","Teclados","USB","Adaptadores","SSD / HDD"],m:"Hola, quiero consultar un producto"}
+];
+var tabs=document.getElementById("tabs"),panel=document.getElementById("panel");
+function show(i){
+  var d=DATA[i];
+  [].forEach.call(tabs.children,function(b,j){b.setAttribute("aria-selected",j===i)});
+  var h="<h3>"+d.t+"</h3><p>"+d.p+"</p>";
+  if(d.ops){h+='<div class="ops">'+d.ops.map(function(o){return '<div class="op '+o.toLowerCase()+'">'+o+'</div>'}).join("")+'</div>'}
+  else{h+='<ul class="chips">'+d.c.map(function(x){return "<li>"+x+"</li>"}).join("")+"</ul>"}
+  h+='<a class="btn" href="https://wa.me/'+NUM+'?text='+encodeURIComponent(d.m)+'">Consultar por WhatsApp</a>';
+  panel.style.animation="none";panel.offsetHeight;panel.style.animation="";
+  panel.innerHTML=h;
+}
+DATA.forEach(function(d,i){
+  var b=document.createElement("button");b.className="tab";b.role="tab";b.textContent=d.l;
+  b.onclick=function(){show(i)};tabs.appendChild(b);
+});
+show(0);
+var words=["reparamos.","imprimimos.","recargamos.","vendemos.","actualizamos."],k=0,rot=document.getElementById("rot");
+if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+  setInterval(function(){k=(k+1)%words.length;rot.innerHTML="<span>"+words[k]+"</span>"},2200);
+}
+</script>
+</body>
+</html>
